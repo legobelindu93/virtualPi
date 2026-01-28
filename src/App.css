@@ -1,0 +1,25 @@
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-controls {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay-controls:hover,
+.app-container:hover .overlay-controls {
+  opacity: 1;
+  /* Fade in on hover */
+}
